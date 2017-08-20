@@ -1,0 +1,17 @@
+<h1>Mini Brog ver 2.1</h1>
+<%= form_for :post, url: users_index_path do |f| %>
+  <p>
+    <%= f.label :text, "件名:" %>
+    <%= f.text_field :text %>
+    <%= f.submit "投稿" %>
+  </p>
+<% end %>
+
+<hr>
+<%= @posts.each.reverse_each do |post| %>
+  <p> No.<%= post.id %>: <%= post.text%> <%= link_to '[コメント]', controller:'users', action:'content', id: post.id  %> </p> 
+  <p> 投稿時間:<%= post.created_at %> | <%= link_to 'いいね', controller:'posts', action:'edit', id: post.id %> : <%= post.fav %>  | コメント:<%= post.comments.count %> </p> <br>
+
+<hr width="75%">
+
+<% end %>

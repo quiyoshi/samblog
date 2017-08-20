@@ -1,0 +1,10 @@
+<h1>Mini Brog</h1>
+<%= form_for :post, url: posts_path do |f|%>
+  <p>
+    <%= f.label :text, "件名" %>
+    <%= f.text_field :text %>
+    <%= f.submit "投稿" %>
+  </p>
+<% end %>
+
+<hr>

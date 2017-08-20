@@ -1,0 +1,20 @@
+<h1>Mini Brog ver 2.1</h1>
+<p><%= link_to '戻る', users_index_path%></p>
+
+<hr>
+<p> No.<%= @post.id %>: 投稿時間:<%= @post.created_at  %> | いいね:<%= @post.fav %> </p> 
+<p> <%= @post.text%> </p> <br>
+
+<%= form_for [@post, @comment] do |f| %>
+  <p>
+    <%= f.label :opinion, "コメント:" %>
+    <%= f.text_field :opinion %>
+    <%= f.submit "投稿"%>
+  </p>
+<% end %>
+
+<hr>
+<h2>コメント</h2>
+<%= @post.comments.each.reverse_each do |comment| %>
+  <p> <%= comment.opinion %> | 投稿時間:<%= comment.created_at%></p> <br>
+<% end %>
