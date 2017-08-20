@@ -1,12 +1,12 @@
 # Mini Blog on Ruby
 
 ## Summary
-Mini Blog for Atem intern2019 task
+Mini Blog for Ateam intern2019 task
 
 ## Author
 Kazuya Saito (qui44)
 
-## Enviroment
+## Enviroments
 * Linux (Ubuntu 14.02.4 LTS)
 * Ruby 2.4.1
   * [Framework] Rails 5.1.3
@@ -15,8 +15,8 @@ Kazuya Saito (qui44)
 ## Features
 * You'll post comments on Mini Blog.
   * A comment has contribution date/time, Likes and opinions.
-* You'll press the Like on comments.
-* You'll post opinions on comment.
+* You'll press the Like on comments posted.
+* You'll post opinions on comments posted.
 
 ## Links
 【Heroku】<https://floating-plateau-15507.herokuapp.com/users/index>
